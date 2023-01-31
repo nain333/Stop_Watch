@@ -1,8 +1,10 @@
+/* universal Selector css rule */
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+/* setting up the body style */
 body{
     font-family: sans-serif;
     font-size: 16px;
@@ -13,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* Styling of the watch circles */
 .outter-circle{
     display: flex;
     align-items: center;
@@ -23,6 +26,24 @@ body{
     border-radius: 50%;
 
 }
+/* background-animation while the stopwatch is running */
+.bg-animation{
+    background:linear-gradient(-45deg, #ee7752, orange,#e73c7e,#23a6d5,#23d5ab,#39FF14);
+    background-size:400% 400%;
+    animation: gradient 7s ease infinite; 
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+    
+}
 .inner-circle{
     height: 210px;
     width: 210px;
@@ -32,6 +53,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+/* util-classes */
 .text{
     color:white;
     font-size: 23px;
@@ -47,6 +69,7 @@ body{
 .milisecond{
     font-size: 23px;
 }
+/* button-palet/wrapper styling */
 .button-wrapper{
     width: 250px;
     margin-top: 30px;
@@ -67,6 +90,7 @@ button:hover{
     background-color: white;
     color:black;
 }
+/* classes regarding laps */
 .laps  {
     display: inline-block;
     list-style: none;
@@ -100,4 +124,26 @@ button:hover{
 .time-stamp{
     display: inline-block;
     margin-left: 25px;
+}
+.lap-clear-button{
+    display: block;
+    z-index: 100;
+    position: fixed;
+    bottom: 50px;
+    
+    padding: 15px 0;
+    width: 180px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+    cursor:pointer;
+}
+/* class to toggle the visibility of lap and reset buttons on play/reset  */
+.hidden{
+    visibility: hidden;
 }
