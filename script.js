@@ -48,6 +48,11 @@ const play = ()=>{
     },10); 
     isPlay=true;
     isReset=true;
+    second.classList.remove('blink');
+    minute.classList.remove('blink');
+    centiSecond.classList.remove('blink');
+    bg.classList.remove('blink');
+    bg.classList.remove('pause-bg')
     }
     else{
         playButton.innerHTML='Play';
@@ -56,6 +61,11 @@ const play = ()=>{
         clearInterval(centiSec);
         isPlay=false;
         isReset=false;
+        second.classList.add('blink');
+        minute.classList.add('blink');
+        centiSecond.classList.add('blink');
+        bg.classList.add('pause-bg');
+        bg.classList.add('blink')
         
         bg.classList.remove("bg-animation");
         
