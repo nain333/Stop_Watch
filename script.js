@@ -84,6 +84,11 @@ const reset=()=>{
     second.innerHTML='&nbsp;0 :';
     centiSecond.innerHTML='&nbsp0';
     minute.innerHTML='0 :';
+    second.classList.remove('blink');
+    minute.classList.remove('blink');
+    centiSecond.classList.remove('blink');
+    bg.classList.remove('pause-bg');
+    bg.classList.remove('blink');
     minCounter=0;
     secCounter=0;
     centiCounter=0;
