@@ -56,6 +56,7 @@ const play = ()=>{
         clearInterval(centiSec);
         isPlay=false;
         isReset=false;
+        
         bg.classList.remove("bg-animation");
         
         
@@ -73,6 +74,9 @@ const reset=()=>{
     second.innerHTML='&nbsp;0 :';
     centiSecond.innerHTML='&nbsp0';
     minute.innerHTML='0 :';
+    minCounter=0;
+    secCounter=0;
+    centiCounter=0;
     lapItem=0;
 }
 // lap
